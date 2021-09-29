@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="za.ac.nwu.ac.logic.flow.ModuloTest" time="0" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="za.ac.nwu.ac.logic.flow.ModuloTest" time="0.001" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\test-classes;C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\classes;C:\DO\nwu\repo\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;"/>
+    <property name="java.class.path" value="C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\test-classes;C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\classes;"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.7_10\bin"/>
-    <property name="sun.java.command" value="C:\Users\nedua\AppData\Local\Temp\surefire15534766035891899724\surefirebooter17282437117458998505.jar C:\Users\nedua\AppData\Local\Temp\surefire15534766035891899724 2021-09-28T15-32-30_965-jvmRun1 surefire2334966757909497827tmp surefire_013941049463877150484tmp"/>
+    <property name="sun.java.command" value="C:\Users\nedua\AppData\Local\Temp\surefire8160396070728657217\surefirebooter3210679943955610006.jar C:\Users\nedua\AppData\Local\Temp\surefire8160396070728657217 2021-09-29T15-43-19_687-jvmRun1 surefire17333211435120293358tmp surefire_02932059749192510841tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\test-classes;C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\classes;C:\DO\nwu\repo\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;"/>
+    <property name="surefire.test.class.path" value="C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\test-classes;C:\DO\nwu\repo\AccountSystemV1.1\AccountSystemLogic\target\classes;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\nedua"/>
     <property name="user.language" value="en"/>
@@ -34,7 +34,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="idea.version2020.1.1" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\nedua\AppData\Local\Temp\surefire15534766035891899724\surefirebooter17282437117458998505.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\nedua\AppData\Local\Temp\surefire8160396070728657217\surefirebooter3210679943955610006.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.7+10-LTS"/>

@@ -8,11 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AccountSystemWebSpringBoot" />
-        <module name="AccountSystemRepository" />
+        <module name="AccountSystemDomain" />
         <module name="AccountSystemWeb" />
         <module name="AccountSystemLogic" />
-        <module name="AccountSystemDomain" />
         <module name="AccountSystemTranslator" />
+        <module name="AccountSystemRepository" />
       </profile>
     </annotationProcessing>
   </component>

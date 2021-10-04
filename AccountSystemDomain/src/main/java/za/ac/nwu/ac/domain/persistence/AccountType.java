@@ -22,7 +22,7 @@ public class AccountType implements Serializable {
     private String accountTypeName;
     private LocalDate dateCreated;
 
-    public AccountType() {
+    public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
     }
 
     public AccountType(String AT_ID, String mnemonic, String accountTypeName, LocalDate dateCreated) {

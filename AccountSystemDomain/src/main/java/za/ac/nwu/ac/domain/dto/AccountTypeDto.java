@@ -1,10 +1,16 @@
 package za.ac.nwu.ac.domain.dto;
 
+//import com.fasterxml.jackson.annotaion.JsonIgnore;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
+
+//@ApiModel(value = "AccountType",
+        //description = "A DTO that represents the AccountType"
+//)
+
 
 public class AccountTypeDto implements Serializable {
 
@@ -15,6 +21,7 @@ public class AccountTypeDto implements Serializable {
     private LocalDate creationDate;
 
     public AccountTypeDto() {
+
     }
 
     public AccountTypeDto(String mnemonic, String accountTypeName, LocalDate creationDate) {
@@ -24,6 +31,9 @@ public class AccountTypeDto implements Serializable {
     }
 
     public AccountTypeDto(AccountType accountType) {
+//        this.setAccountTypeName(accountType.getAccountTypeName());
+//        this.setCreationDate(accountType.getDateCreated());
+//        this.setMnemonic(accountType.getMnemonic());
     }
 
     public String getMnemonic() {

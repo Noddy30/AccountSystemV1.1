@@ -21,7 +21,7 @@ public class AccountTypeDto implements Serializable {
     private String accountTypeName;
     private LocalDate creationDate;
 
-    public AccountTypeDto() {
+    public AccountTypeDto(AccountTypeDto accountType) {
 
     }
 
@@ -33,7 +33,7 @@ public class AccountTypeDto implements Serializable {
 
     public AccountTypeDto(AccountType accountType) {
         this.setAccountTypeName(accountType.getAccountTypeName());
-        this.setCreationDate(accountType.getDateCreated());
+        this.setCreationDate(accountType.getCreationDate());
         this.setMnemonic(accountType.getMnemonic());
     }
 

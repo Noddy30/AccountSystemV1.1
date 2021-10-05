@@ -20,16 +20,16 @@ public class AccountType implements Serializable {
     private String AT_ID;
     private String mnemonic;
     private String accountTypeName;
-    private LocalDate dateCreated;
+    private LocalDate creationDate;
 
     public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
     }
 
-    public AccountType(String AT_ID, String mnemonic, String accountTypeName, LocalDate dateCreated) {
+    public AccountType(String AT_ID, String mnemonic, String accountTypeName, LocalDate creationDate) {
         this.AT_ID = AT_ID;
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
-        this.dateCreated = dateCreated;
+        this.creationDate = creationDate;
     }
     @Id
     @Column(name= "ACCOUNT_TYPE_ID")
@@ -60,12 +60,12 @@ public class AccountType implements Serializable {
     }
 
     @Column(name= "CREATION_DATE")
-    public LocalDate getDateCreated() {
-        return dateCreated;
+    public LocalDate getCreationDate() {
+        return creationDate;
     }
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setCreationDate(LocalDate creationDate) {
+        this.creationDate = creationDate;
     }
 
     private Set<AccountTransaction> accountTransactions;
@@ -87,13 +87,13 @@ public class AccountType implements Serializable {
         return Objects.equals(AT_ID, that.AT_ID) &&
                 Objects.equals(mnemonic, that.mnemonic) &&
                 Objects.equals(accountTypeName, that.accountTypeName) &&
-                Objects.equals(dateCreated, that.dateCreated) &&
+                Objects.equals(creationDate, that.creationDate) &&
                 Objects.equals(accountTransactions, that.accountTransactions);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(AT_ID, mnemonic, accountTypeName, dateCreated, accountTransactions);
+        return Objects.hash(AT_ID, mnemonic, accountTypeName, creationDate, accountTransactions);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class AccountType implements Serializable {
                 "AT_ID='" + AT_ID + '\'' +
                 ", mnemonic='" + mnemonic + '\'' +
                 ", accountTypeName='" + accountTypeName + '\'' +
-                ", dateCreated=" + dateCreated +
+                ", dateCreated=" + creationDate +
                 ", accountTransactions=" + accountTransactions +
                 '}';
     }

@@ -37,6 +37,10 @@ public class AccountTypeDto implements Serializable {
         this.setMnemonic(accountType.getMnemonic());
     }
 
+    public AccountTypeDto() {
+
+    }
+
 
     @ApiModelProperty(position=1,
             value= "AccountType Mnemonic",

@@ -25,6 +25,10 @@ public class AccountTypeDto implements Serializable {
 
     }
 
+    public AccountTypeDto() {
+
+    }
+
     public AccountTypeDto(String mnemonic, String accountTypeName, LocalDate creationDate) {
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
@@ -37,9 +41,6 @@ public class AccountTypeDto implements Serializable {
         this.setMnemonic(accountType.getMnemonic());
     }
 
-    public AccountTypeDto() {
-
-    }
 
 
     @ApiModelProperty(position=1,

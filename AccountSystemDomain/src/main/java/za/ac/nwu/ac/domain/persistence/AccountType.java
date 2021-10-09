@@ -14,10 +14,11 @@ public class AccountType implements Serializable {
 
     private static final long serialVersionUID = 7419039683014995220L;
 
-    @SequenceGenerator(name= "DISCOVERY_SEQ", sequenceName= "ACCOUNT_SYSTEM.DISCOVERY_SEQ", allocationSize=1)
-    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator= "DISCOVERY_SEQ")
 
-    private String AT_ID;
+
+    private Set<AccountTransaction> accountTransactions;
+    private Set<Member> member;
+    private Long AT_ID;
     private String mnemonic;
     private String accountTypeName;
     private LocalDate creationDate;
@@ -25,29 +26,22 @@ public class AccountType implements Serializable {
     public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
     }
 
-    public AccountType(String AT_ID, String mnemonic, String accountTypeName, LocalDate creationDate) {
+    public AccountType(Long AT_ID, String mnemonic, String accountTypeName, LocalDate creationDate) {
         this.AT_ID = AT_ID;
         this.mnemonic = mnemonic;
         this.accountTypeName = accountTypeName;
         this.creationDate = creationDate;
     }
     @Id
+    @SequenceGenerator(name= "DISCOVERY_VITALITY_SEQ", sequenceName= "ACCOUNT_SYSTEM.DISCOVERY_VITALITY_SEQ", allocationSize=1)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator= "DISCOVERY_VITALITY_SEQ")
     @Column(name= "ACCOUNT_TYPE_ID")
-    public String getAT_ID() {
+    public Long getAT_ID() {
         return AT_ID;
     }
 
-    public void setAT_ID(String AT_ID) {
+    public void setAT_ID(Long AT_ID) {
         this.AT_ID = AT_ID;
-    }
-
-    @Column(name= "MNEMONIC")
-    public String getMnemonic() {
-        return mnemonic;
-    }
-
-    public void setMnemonic(String mnemonic) {
-        this.mnemonic = mnemonic;
     }
 
     @Column(name= "ACCOUNT_TYPE_NAME")
@@ -68,7 +62,14 @@ public class AccountType implements Serializable {
         this.creationDate = creationDate;
     }
 
-    private Set<AccountTransaction> accountTransactions;
+    @Column(name= "MNEMONIC")
+    public String getMnemonic() {
+        return mnemonic;
+    }
+
+    public void setMnemonic(String mnemonic) {
+        this.mnemonic = mnemonic;
+    }
 
     @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountType", orphanRemoval = true, cascade = CascadeType.PERSIST)
     public Set<AccountTransaction> getAccountTransactions(){

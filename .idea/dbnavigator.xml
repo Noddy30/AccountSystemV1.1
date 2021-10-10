@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="ec420d96-1e25-4f30-9d41-1dce81100866">
-        <schema name="DISCOVERY" object-types="table" />
+        <schema name="DISCOVERY" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
       </connection>
     </loaded-nodes>
   </component>

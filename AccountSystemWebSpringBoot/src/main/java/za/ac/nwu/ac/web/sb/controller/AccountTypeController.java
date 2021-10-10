@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -23,6 +25,8 @@ import java.util.List;
 @RestController
 @RequestMapping("account-type")
 public class AccountTypeController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccountTypeController.class);
 
     public final FetchAccountTypeFlow fetchAccountTypeFlow;
     public final CreateAccountTypeFlow createAccountTypeFlow;
@@ -56,8 +60,7 @@ public class AccountTypeController {
             @ApiResponse(code = 400, message = "Bad Request",response = GeneralResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error",response = GeneralResponse.class)})
     public ResponseEntity<GeneralResponse<AccountTypeDto>> create(
-            @ApiParam(value ="Request to create a new AccountType.",
-                    required = true)
+            @ApiParam(value ="Request to create a new AccountType.", required = true)
             @RequestBody AccountTypeDto accountType){
         AccountTypeDto accountTypeResponse = createAccountTypeFlow.create(accountType);
         GeneralResponse<AccountTypeDto> response = new GeneralResponse<>(true, accountTypeResponse);

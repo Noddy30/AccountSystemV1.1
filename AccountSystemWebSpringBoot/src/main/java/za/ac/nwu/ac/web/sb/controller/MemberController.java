@@ -31,16 +31,8 @@ public class MemberController {
         this.createMemberFlow = createMemberFlow;
         this.modifyMemberFlow = modifyMemberFlow;
     }
-
-    //    @Autowired
-//    public MemberController(FetchMemberFlow fetchMemberFlow,
-//                            @Qualifier("createMemberFlowName") CreateMemberFlow createMemberFlow, ModifyMemberFlow modifyMemberFlow) {
-//        this.fetchMemberFlow = fetchMemberFlow;
-//        this.createMemberFlow = createMemberFlow;
-//        this.modifyMemberFlow = modifyMemberFlow;
-//    }
     @GetMapping("/all")
-    @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
+    @ApiOperation(value = "Gets all the configured Members.", notes = "Returns a list of Members")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Account types returned",response = GeneralResponse.class),
             @ApiResponse(code = 400, message = "Bad Request",response = GeneralResponse.class),

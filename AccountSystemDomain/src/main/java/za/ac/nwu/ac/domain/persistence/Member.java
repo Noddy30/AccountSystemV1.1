@@ -36,7 +36,7 @@ public class Member implements Serializable {
 //    }
 
     @Id
-    @SequenceGenerator(name = "DISCOVERY_SEQ", sequenceName = "ACCOUNT_SYSTEM.DISCOVERY_SEQ", allocationSize = 1)
+    @SequenceGenerator(name = "DISCOVERY_SEQ", sequenceName = "DISCOVERY.DISCOVERY_VITALITY_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DISCOVERY_SEQ")
     @Column(name = "MEMBER_ID")
     public Integer getMemberId() {

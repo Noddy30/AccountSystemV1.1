@@ -1,6 +1,5 @@
 package za.ac.nwu.ac.domain.persistence;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,13 +10,11 @@ import java.util.Set;
 @Table(name = "DEMO_ACCOUNT_TYPE", schema = "DISCOVERY")
 public class AccountType implements Serializable {
 
-
     private static final long serialVersionUID = 7419039683014995220L;
-
-
 
     private Set<AccountTransaction> accountTransactions;
     private Set<Member> member;
+
     private Long AT_ID;
     private String mnemonic;
     private String accountTypeName;
@@ -33,7 +30,7 @@ public class AccountType implements Serializable {
         this.creationDate = creationDate;
     }
     @Id
-    @SequenceGenerator(name= "DISCOVERY_VITALITY_SEQ", sequenceName= "ACCOUNT_SYSTEM.DISCOVERY_VITALITY_SEQ", allocationSize=1)
+    @SequenceGenerator(name= "DISCOVERY_VITALITY_SEQ", sequenceName= "DISCOVERY.DISCOVERY_VITALITY_SEQ", allocationSize=1)
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator= "DISCOVERY_VITALITY_SEQ")
     @Column(name= "ACCOUNT_TYPE_ID")
     public Long getAT_ID() {

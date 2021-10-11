@@ -32,8 +32,6 @@ public class Member implements Serializable {
         this.memberStartDate = memberStartDate;
     }
 
-//    public Member(String memberId, String milesAmount, LocalDate memberStartDate) {
-//    }
 
     @Id
     @SequenceGenerator(name = "DISCOVERY_SEQ", sequenceName = "DISCOVERY.DISCOVERY_VITALITY_SEQ", allocationSize = 1)

@@ -16,7 +16,6 @@ public class CreateAccountTypeFlowImpl implements CreateAccountTypeFlow {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CreateAccountTypeFlowImpl.class);
 
-
     private final AccountTypeTranslator accountTypeTranslator;
 
     public CreateAccountTypeFlowImpl(AccountTypeTranslator accountTypeTranslator) {
@@ -25,10 +24,15 @@ public class CreateAccountTypeFlowImpl implements CreateAccountTypeFlow {
 
     @Override
     public AccountTypeDto create(AccountTypeDto accountType){
+        LOGGER.info("The input object was {}", accountType);
+
         if(null== accountType.getCreationDate()){
             accountType.setCreationDate(LocalDate.now());
         }
         accountTypeTranslator.someMethod();
-        return accountTypeTranslator.create(accountType);
+
+        final AccountTypeDto result = accountTypeTranslator.create(accountType);
+        LOGGER.info("The return object is {}", result);
+        return result;
     }
 }

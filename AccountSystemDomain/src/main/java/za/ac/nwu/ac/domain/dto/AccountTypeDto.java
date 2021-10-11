@@ -4,6 +4,8 @@ package za.ac.nwu.ac.domain.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 
 import java.io.Serializable;
@@ -12,6 +14,8 @@ import java.util.Objects;
 
 @ApiModel(value="AccountType",description="A dto for AccountType")
 public class AccountTypeDto implements Serializable {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccountTypeDto.class);
 
     private static final long serialVersionUID = 3095741349130650689L;
     private String mnemonic;
@@ -46,6 +50,7 @@ public class AccountTypeDto implements Serializable {
             example = "MILES",
             required = true)
     public String getMnemonic() {
+        LOGGER.info("The getMnemonic is {}", mnemonic);
         return mnemonic;
     }
 
@@ -62,6 +67,7 @@ public class AccountTypeDto implements Serializable {
             allowEmptyValue = false,
             required = true)
     public String getAccountTypeName() {
+        LOGGER.info("The getAccountTypeName is {}", accountTypeName);
         return accountTypeName;
     }
 
